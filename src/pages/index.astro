@@ -16,30 +16,24 @@ import Proyects from "../components/Proyects.astro";
   <main class="px-4">
     <SectionContainer id="Home" class="md:pt-30 pb-12 pt-5 lg:pb-24 lg:pt-32">
       <img
-        src="https://github.com/joseleoc.png?size=64"
-        class="mb-3 aspect-square h-auto w-16 rounded-full"
+        src="https://github.com/joseleoc.png?size=160"
+        class="mb-3 aspect-square h-auto w-20 rounded-full md:w-40"
         alt="Leonardo Contreras photo"
       />
 
       <h1
         class="flex items-center gap-5 pb-3 text-2xl font-bold text-white md:text-4xl lg:text-5xl"
       >
-        Hey, Soy Leonardo
-        <a
-          href="https://www.linkedin.com/in/leonardo-contreras-v/"
-          target="_blank"
-          rel="noopener"
-          class="flex items-center"
-        >
-          <Badge>Disponible para trabajar</Badge>
-        </a>
+        Hello, I'm Leonardo
+
+        <Badge href="https://www.linkedin.com/in/leonardo-contreras-v/">
+          Available to work
+        </Badge>
       </h1>
       <h2 class="mt-2 max-w-[700px] text-wrap text-xl lg:text-2xl">
-        <span>2 años de experiencia.</span>
-        <span class="text-yellow-200/90"> Desarrollador web. </span>
-        <span class="opacity-75">
-          Especializado en crear aplicaciones únicas
-        </span>
+        <label id="working-time"> </label>
+        <span class="text-yellow-200/90"> Web Developer. </span>
+        <span class="opacity-75"> The developer your project needs. </span>
       </h2>
 
       <nav class="mt-8 flex flex-wrap gap-3">
@@ -50,7 +44,7 @@ import Proyects from "../components/Proyects.astro";
 
         <SocialPill href="https://github.com/joseleoc">
           <GithubIcon class="size-4 lg:size-6" />
-          LinkedIn
+          Github
         </SocialPill>
 
         <SocialPill href="mailto:joseleoc123@gmail.com">
@@ -65,7 +59,7 @@ import Proyects from "../components/Proyects.astro";
         class="mb-8 flex items-center gap-x-3 text-xl font-semibold md:text-2xl"
       >
         <BriefCaseIcon class="size-7" />
-        Experiencia laboral
+        Work experience
       </h2>
       <Experience />
     </SectionContainer>
@@ -75,9 +69,30 @@ import Proyects from "../components/Proyects.astro";
         class="mb-8 flex items-center gap-x-3 text-xl font-semibold md:text-2xl"
       >
         <CodeIcon class="size-7" />
-        Experiencia laboral
+        Work experience
       </h2>
       <Proyects />
     </SectionContainer>
   </main>
 </Layout>
+
+<script>
+  function init() {
+    const element = document.querySelector("#working-time") as HTMLLabelElement;
+
+    if (!element) return;
+    const TimestampStart = 1648810800000; // april 2022.
+    const startDate = new Date(TimestampStart).getTime();
+    const now = new Date().getTime();
+    const diff = new Date(now - startDate);
+    const workingYears = diff.getFullYear() - 1970;
+    const workingMonths = diff.getMonth();
+
+    function setWorkingTime() {
+      element.innerText = `${workingYears} years ${workingMonths > 0 ? `and ${workingMonths} months` : ""} of working experience.`;
+    }
+    setWorkingTime();
+  }
+
+  init();
+</script>
