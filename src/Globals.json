@@ -1,17 +1,15 @@
 {
-  "DESCRIPTION":"",
+  "DESCRIPTION": "",
   "EXPERIENCE": [
     {
       "date": "Actual",
       "title": "InnovaRhyno - Web developer",
-      "description": "In my current role as a Developer at Innova Rhyno, I have been working on an exciting project involving key technologies such as Angular, Google Maps, and Firebase. My contribution has been marked by significant improvements in the project's structure, user interface development, the drive to implement tests for code quality, swift resolution of user stories and issues, and assistance in cost reduction through service optimization. Through my work, I have had a tangible impact on development efficiency and quality, further contributing to the ongoing success of our team and projects.",
-      "link": "#"
+      "description": "At Innova Rhyno, I've tackled a captivating project utilizing cutting-edge tech like Angular, Google Maps, and Firebase. My contributions improved the project's architecture, user interface, and testing practices. I efficiently resolved user stories and issues, and streamlined services to reduce costs. This technical expertise has demonstrably enhanced development quality, propelling our team and projects forward."
     },
     {
       "date": "Actual",
       "title": "Lagoon Studios - Co-founder & Web developer",
-      "description": "At Lagoon Studios, my personal venture, I have primarily worked with React and React Native, gaining a deep understanding of these technologies and successfully applying their concepts to my primary work projects, significantly enhancing the quality of the products I deliver. Additionally, I have undertaken projects that involved the rapid handling of large datasets with Firebase, and I have leveraged Jest as a testing environment to ensure the reliability and quality of the codebase. Through Lagoon Studios, I have honed my skills and brought innovative solutions to the forefront of my professional endeavors.",
-      "link": "#"
+      "description": "At Lagoon Studios, my personal venture, I have primarily worked with React and React Native, gaining a deep understanding of these technologies and successfully applying their concepts to my primary work projects, significantly enhancing the quality of the products I deliver. Additionally, I have undertaken projects that involved the rapid handling of large datasets with Firebase, and I have leveraged Jest as a testing environment to ensure the reliability and quality of the codebase. Through Lagoon Studios, I have honed my skills and brought innovative solutions to the forefront of my professional endeavors."
     }
   ]
 }
