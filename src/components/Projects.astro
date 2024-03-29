@@ -3,6 +3,7 @@ import Angular from "../icons/Angular.astro";
 import HTML from "../icons/HTML.astro";
 import React from "../icons/React.astro";
 import Tailwind from "../icons/Tailwind.astro";
+import Description from "./Description.astro";
 
 const TAGS = {
   Angular: {
@@ -31,7 +32,7 @@ const PROJECTS = [
   {
     title: "TicketScann",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla massa velit. Curabitur suscipit accumsan egestas. Quisque a nulla dui. Integer dapibus ac neque sed tristique. ",
+      "This project focused on managing event attendance for over 8,000 participants on two separate occasions. Attendees received a unique QR code via email, which they scanned using a custom mobile app to ensure a smooth and swift entry process at the event.",
     link: "#",
     github: "#",
     image: "https://via.placeholder.com/300x200",
@@ -46,7 +47,11 @@ const PROJECTS = [
       <h3 class="mb-2 text-xl font-semibold text-yellow-200 md:text-2xl">
         {title}
       </h3>
-      <p class="mb-4 text-pretty text-base md:text-xl">{description}</p>
+
+      <Description class="mb-4 text-pretty text-base md:text-xl">
+        {description}
+      </Description>
+
       <ul class="mb-2 flex gap-x-2">
         {tags.map((tag) => (
           <li>

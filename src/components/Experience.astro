@@ -7,9 +7,9 @@ const experience = EXPERIENCE;
 
 <ol class="relative ml-3 border-s border-gray-200 dark:border-gray-700">
   {
-    experience.map((exp) => (
+    experience.map((exp, ind) => (
       <li class="mb-10 ms-4">
-        <ExperienceItem {...exp} />
+        <ExperienceItem id={ind.toString()} {...exp} />
       </li>
     ))
   }
