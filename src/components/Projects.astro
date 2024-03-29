@@ -51,7 +51,7 @@ const PROJECTS = [
     link: "#",
     github: "#",
     image: TDHFestIcon,
-    tags: [TAGS.React, TAGS.Expo, TAGS.Firebase, TAGS.HTML, TAGS.Tailwind],
+    tags: [TAGS.React, TAGS.Expo, TAGS.Firebase, TAGS.Tailwind],
   },
 ];
 ---
@@ -63,18 +63,18 @@ const PROJECTS = [
         {title}
       </h3>
 
-      <div class="flex items-center justify-center gap-4">
+      <div class="flex flex-col items-center justify-center gap-2 md:flex-row md:gap-4">
         <Image
           src={image}
           alt={`Icono del proyecto ${title}`}
-          class="shadow.white/10 size-40 rounded shadow-2xl"
+          class="shadow.white/10 size-24 rounded shadow-2xl md:size-40"
         />
-        <div>
+        <div class="max-w-full overflow-hidden">
           <Description class="mb-4 text-pretty text-base md:text-xl">
             {description}
           </Description>
 
-          <ul class="mb-2 flex gap-x-2">
+          <ul class="mb-2 flex gap-x-2 overflow-x-auto">
             {tags.map((tag) => (
               <li>
                 <span
