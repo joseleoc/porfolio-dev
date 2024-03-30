@@ -11,5 +11,21 @@
       "title": "Lagoon Studios - Co-founder & Web developer",
       "description": "At Lagoon Studios, my personal venture, I have primarily worked with React and React Native, gaining a deep understanding of these technologies and successfully applying their concepts to my primary work projects, significantly enhancing the quality of the products I deliver. Additionally, I have undertaken projects that involved the rapid handling of large datasets with Firebase, and I have leveraged Jest as a testing environment to ensure the reliability and quality of the codebase. Through Lagoon Studios, I have honed my skills and brought innovative solutions to the forefront of my professional endeavors."
     }
+  ],
+  "PROJECTS": [
+    {
+      "id": "TDHFest",
+      "title": "TDHFest",
+      "description": "This project focused on managing event attendance for over 8,000 participants on two separate occasions. Attendees received a unique QR code via email, which they scanned using a custom mobile app to ensure a smooth and swift entry process at the event.",
+      "link": "#",
+      "icon": "/assets/ticketscan/icon.webp",
+      "images": [
+        "/assets/ticketscan/login.webp",
+        "/assets/ticketscan/scanner.webp",
+        "/assets/ticketscan/home.webp",
+        "/assets/ticketscan/manual-register.webp"
+      ],
+      "tags": ["React", "Expo", "Firebase", "Tailwind"]
+    }
   ]
 }

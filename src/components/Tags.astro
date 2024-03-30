@@ -1,0 +1,71 @@
+---
+import Angular from "../icons/Angular.astro";
+import HTML from "../icons/HTML.astro";
+import React from "../icons/React.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import Expo from "../icons/Expo.astro";
+import Firebase from "../icons/Firebase.astro";
+
+interface Props {
+  tags: string[];
+}
+
+const TAGS: {
+  [key: string]: {
+    name: string;
+    class: string;
+    icon: (_props: Record<string, any>) => any;
+  };
+} = {
+  Angular: {
+    name: "Angular",
+    class: "bg-[#b52e31] text-white",
+    icon: Angular,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#e34f26] text-black",
+    icon: HTML,
+  },
+  React: {
+    name: "React",
+    class: "bg-[#00d8ff] text-black",
+    icon: React,
+  },
+  Tailwind: {
+    name: "Tailwind",
+    class: "bg-[#39bdf8] text-black",
+    icon: Tailwind,
+  },
+  Expo: {
+    name: "Expo",
+    class: "bg-black text-white",
+    icon: Expo,
+  },
+  Firebase: {
+    name: "Firebase",
+    class: "text-black bg-[#F5820D]",
+    icon: Firebase,
+  },
+};
+
+const { tags } = Astro.props;
+
+const customTags = tags.map((tag) => TAGS[tag]);
+---
+
+<ul class="mb-2 flex gap-x-2 overflow-x-auto">
+  {
+    customTags &&
+      customTags.map((tag) => (
+        <li>
+          <span
+            class={`flex items-center gap-x-2 rounded-full px-4 py-2 text-xs font-bold ${tag.class}`}
+          >
+            <tag.icon class="size-5" />
+            {tag.name}
+          </span>
+        </li>
+      ))
+  }
+</ul>
