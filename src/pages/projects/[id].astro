@@ -30,6 +30,12 @@ export const getStaticPaths = (() => {
             </h1>
 
             {!!project.images.length && <Carousel images={project.images} />}
+
+            {!!project.description && (
+              <p class="mt-5 text-pretty text-sm font-normal text-gray-200 md:text-base">
+                {project.description}
+              </p>
+            )}
           </section>
         )
       }
