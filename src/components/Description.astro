@@ -5,8 +5,41 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<p
-  class={`mb-4 line-clamp-3  hover:line-clamp-none text-pretty text-sm font-normal text-gray-200 md:text-base ${className || ""}`}
->
-  <slot />
-</p>
+<astro-description>
+  <div class={`${className} || ""`}>
+    <p
+      class={`line-clamp-3  text-pretty text-sm font-normal text-gray-200 md:text-base `}
+    >
+      <slot />
+    </p>
+    <button
+      id="1"
+      class="mb-4 text-end text-sm font-normal text-gray-400 md:text-base"
+    >
+      more...
+    </button>
+  </div>
+</astro-description>
+
+<script>
+  class AstroDescription extends HTMLElement {
+    constructor() {
+      super();
+
+      const moreBtn = this.querySelector("button");
+      const paragraph = this.querySelector("p");
+
+      moreBtn?.addEventListener("click", () => {
+        if (moreBtn.textContent === "more...") {
+          paragraph?.classList.remove("line-clamp-3");
+          moreBtn.textContent = "less...";
+        } else {
+          paragraph?.classList.add("line-clamp-3");
+          moreBtn.textContent = "more...";
+        }
+      });
+    }
+  }
+
+  customElements.define("astro-description", AstroDescription);
+</script>
