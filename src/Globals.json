@@ -17,13 +17,25 @@
       "id": "TDHFest",
       "title": "TDHFest",
       "description": "This project focused on managing event attendance for over 8,000 participants on two separate occasions. Attendees received a unique QR code via email, which they scanned using a custom mobile app to ensure a smooth and swift entry process at the event.",
-      "link": "#",
+      "link": "",
       "icon": "/assets/ticketscan/icon.webp",
       "images": [
-        "/assets/ticketscan/login.webp",
-        "/assets/ticketscan/scanner.webp",
-        "/assets/ticketscan/home.webp",
-        "/assets/ticketscan/manual-register.webp"
+        {
+          "path": "/assets/ticketscan/login.webp",
+          "alt": "ticketscann login view"
+        },
+        {
+          "path": "/assets/ticketscan/scanner.webp",
+          "alt": "ticketscann scanner"
+        },
+        {
+          "path": "/assets/ticketscan/home.webp",
+          "alt": "ticketscann home view"
+        },
+        {
+          "path": "/assets/ticketscan/manual-register.webp",
+          "alt": "ticketscann manual register form"
+        }
       ],
       "tags": ["React", "Expo", "Firebase", "Tailwind"]
     }

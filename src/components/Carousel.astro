@@ -1,11 +1,30 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
-  images: string[];
+  images: { path: string; alt: string }[];
 }
 
 const { images } = Astro.props;
 ---
 
+<ul class="overflow-x-auto" style="display: -webkit-inline-box;">
+  {
+    images.map((img) => (
+      <li class="mx-2">
+        <Image
+          src={img.path}
+          width={300}
+          height={300}
+          alt={img.alt}
+          class="h-auto w-40"
+          loading="lazy"
+        />
+      </li>
+    ))
+  }
+</ul>
+<!-- 
 <div id="default-carousel" class="relative w-full" data-carousel="slide">
   <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
     {
@@ -14,7 +33,7 @@ const { images } = Astro.props;
           <p>{img}</p>
           <img
             src={img}
-            class="absolute left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
+            class="absolute  left-1/2 top-1/2 block w-full -translate-x-1/2 -translate-y-1/2"
             alt="..."
           />
         </div>
@@ -107,4 +126,4 @@ const { images } = Astro.props;
       <span class="sr-only">Next</span>
     </span>
   </button>
-</div>
+</div> -->
